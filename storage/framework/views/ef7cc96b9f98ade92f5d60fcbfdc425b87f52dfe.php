@@ -35,8 +35,20 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Detail:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"><?php echo e($product->detail); ?></textarea>
+                    <strong>Email:</strong>
+                    <input type="text" name="email" value="<?php echo e($product->email); ?>" class="form-control" placeholder="Email">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Phone:</strong>
+                    <input type="text" name="phone" value="<?php echo e($product->phone); ?>" class="form-control" placeholder="Phone">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Address:</strong>
+                    <textarea class="form-control" style="height:150px" name="address" placeholder="Detail"><?php echo e($product->address); ?></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

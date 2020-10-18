@@ -20,8 +20,22 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Details:</strong>
-                <?php echo e($product->detail); ?>
+                <strong>Email:</strong>
+                <?php echo e($product->email); ?>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Phone:</strong>
+                <?php echo e($product->phone); ?>
+
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Address:</strong>
+                <?php echo e($product->address); ?>
 
             </div>
         </div>

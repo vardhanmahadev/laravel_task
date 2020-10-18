@@ -22,9 +22,14 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'detail' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-  
+        $input['image'] = time().'.'.$request->image->getClientOriginalExtension();
+        $request->image->move(public_path('images'), $input['image']);
+
         Product::create($request->all());
    
         return redirect()->route('products.index')
@@ -42,9 +47,14 @@ class ProductController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'detail' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-  
+        $input['image'] = time().'.'.$request->image->getClientOriginalExtension();
+        $request->image->move(public_path('images'), $input['image']);
+
         $product->update($request->all());
   
         return redirect()->route('products.index')
@@ -52,6 +62,7 @@ class ProductController extends Controller
     }
   public function destroy(Product $product)
     {
+        
         $product->delete();
   
         return redirect()->route('products.index')

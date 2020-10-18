@@ -34,8 +34,26 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Detail:</strong>
-                <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea>
+                <strong>Email:</strong>
+                <input type="text" name="email" class="form-control" placeholder="Email">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Phone:</strong>
+                <input type="number" name="phone" class="form-control" placeholder="Phone">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Address:</strong>
+                <textarea class="form-control" style="height:150px" name="address" placeholder="Address"></textarea>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Image</strong>
+                <input type="file" name="uploadfile" value="" />
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

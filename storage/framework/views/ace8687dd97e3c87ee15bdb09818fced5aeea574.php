@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 6 CRUD Example from scratch - ItSolutionStuff.com</h2>
+                <h2>CRUD Functionality</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="<?php echo e(route('products.create')); ?>"> Create New Product</a>
@@ -21,14 +21,20 @@
         <tr>
             <th>No</th>
             <th>Name</th>
-            <th>Details</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Photo</th>
             <th width="280px">Action</th>
         </tr>
         <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
             <td><?php echo e(++$i); ?></td>
             <td><?php echo e($product->name); ?></td>
-            <td><?php echo e($product->detail); ?></td>
+            <td><?php echo e($product->email); ?></td>
+            <td><?php echo e($product->phone); ?></td>
+            <td><?php echo e($product->address); ?></td>
+            <td><?php echo e($product->image); ?></td>
             <td>
                 <form action="<?php echo e(route('products.destroy',$product->id)); ?>" method="POST">
    
